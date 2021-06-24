@@ -1,5 +1,7 @@
+/* fixed-menu */
+
 .fixed-menu {
-  position: absolute;
+  position: fixed;
   top: rem(150px);
   right: rem(20px);
   @include tablets {
@@ -11,6 +13,12 @@
   display: flex;
   flex-direction: column;
   padding: rem(10px);
+
+  &.active {
+    .fixed-menu__link:after {
+      opacity: 1;
+    }
+  }
 }
 
 .fixed-menu__link {
@@ -33,10 +41,6 @@
     top: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-  }
-
-  &:focus::after {
-    opacity: 1;
   }
 
   &:hover {

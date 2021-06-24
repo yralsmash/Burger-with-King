@@ -1,3 +1,5 @@
+/* hamburger-menu */
+
 .hamburger-menu-link {
   @include tablets {
     margin-left: rem(30px);
@@ -11,7 +13,7 @@
 
 .hamburger-menu-link__bars {
   width: rem(24px);
-  height: rem(3px);
+  height: rem(4px);
   background: #fff;
   position: relative;
   margin-top: rem(10px);
@@ -26,7 +28,7 @@
     content: '';
     display: block;
     width: rem(24px);
-    height: rem(3px);
+    height: rem(4px);
     background: #fff;
     position: absolute;
     border-radius: rem(5px);

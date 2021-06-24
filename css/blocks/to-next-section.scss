@@ -1,3 +1,5 @@
+/* arrow-scroll */
+
 .to-next-section {
   height: 0;
   width: 0;
@@ -10,10 +12,10 @@
 .arrow-scroll-icon {
   width: rem(29px);
   height: rem(15px);
-  fill: #ffffff;
+  fill: #fff;
 
   &:hover {
-    fill: rgb(223, 210, 210);
-    transition: 1s;
+    fill: #000;
+    transition: 0.5s;
   }
 }

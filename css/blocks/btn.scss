@@ -1,3 +1,5 @@
+/* button */
+
 .btn {
   border-radius: rem(5px);
   padding: rem(10px) rem(15px);
@@ -15,10 +17,21 @@
     text-transform: none;
     font-size: rem(16px);
     margin-left: 5%;
+    border: 1px solid #fff;
   }
 
   &:hover {
-    opacity: 0.7;
+    color: #000;
+    opacity: 0.9;
     transition: 1s;
+  }
+
+  &--overlay {
+    font-weight: bold;
+
+    &:hover {
+      background:none;
+      color: #000;
+    }
   }
 }
