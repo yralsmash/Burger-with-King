@@ -145,7 +145,7 @@ sendButton.addEventListener('click', function(e) {
       if (xhr.status >=400) {
         overlay.classList.remove(hideClass);
         overlayMessage.style.color = 'red';
-        overlayMessage.textContent = 'Отправить письмо не удалось, повторите запрос позже';
+        overlayMessage.textContent = 'Email could not be sent, please try again later';
       } else {
         overlay.classList.remove(hideClass);
       }
@@ -263,8 +263,8 @@ if (isMobile) {
   $(document).swipe( {
     swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
       /*
-      * Потому что библиотека возвращает фактическое перемещение пальца вверх,
-      * а мы основывались на перемещении страницы.
+      * Because the library returns the actual moving of the finger up,
+      * and we were based on moving the page.
       */
       const scrollDirection = direction === 'down' ? 'up' : 'down';
       scrollToSection(scrollDirection);
@@ -342,12 +342,12 @@ function formatTime(time) {
 }
 
 $(playerStart).on('click', e => {
-  // -1 – воспроизведение видео не началось
-  // 0 – воспроизведение видео завершено
-  // 1 – воспроизведение
-  // 2 – пауза
-  // 3 – буферизация
-  // 5 – видео находится в очереди
+  // -1 - video playback has not started
+  // 0 - video playback is finished
+  // 1 - video playback
+  // 2 - pause
+  // 3 - buffering
+  // 5 - video is in the queue
   const playerStatus = player.getPlayerState();
 
   if (playerStatus != -1) {
@@ -385,45 +385,45 @@ var placemarks = [
   {
     latitude: 59.97,
     longitude: 30.31,
-    hintContent: '<div class="map__item map__hint">улица Литераторов, 17</div>',
+    hintContent: '<div class="map__item map__hint">17 Literators Street</div>',
     balloonContent: [
       '<div class="map__item map__balloon">',
       '<img class="map__balloon"/>',
-      '<div class="map__text">Самые вкусные бургеры у нас!</div>',
-      '<div class="map__text">Заходите по адресу: <b> ул.Литераторов, 17</b></div>',
+      '<div class="map__text">We have the tastiest burgers!</div>',
+      '<div class="map__text">Visit us at: <b> Literators St., 17</b></div>',
       '</div>'
     ]
   }, {
     latitude: 59.94,
     longitude: 30.25,
-    hintContent: '<div class="map__item map__hint">Малый проспект В О, 64</div>',
+    hintContent: '<div class="map__item map__hint">Malyy prospect V O, 64</div>',
     balloonContent: [
       '<div class="map__item map__balloon">',
       '<img class="map__balloon"/>',
-      '<div class="map__text">Самые вкусные бургеры у нас!</div>',
-      '<div class="map__text">Заходите по адресу: <b>Малый проспект В О, 64</b></div>',
+      '<div class="map__text">We have the tastiest burgers!</div>',
+      '<div class="map__text">Visit us at: <b>Malyy prospect V O, 64</b></div>',
       '</div>'
     ]
   }, {
     latitude: 59.93,
     longitude: 30.34,
-    hintContent: '<div class="map__item map__hint">Наб. реки Фонтанки, 56</div>',
+    hintContent: '<div class="map__item map__hint">Fontanka River Embankment, 56</div>',
     balloonContent: [
       '<div class="map__item map__balloon">',
       '<img class="map__balloon"/>',
-      '<div class="map__text">Самые вкусные бургеры у нас!</div>',
-      '<div class="map__text">Заходите по адресу: <b>Наб. реки Фонтанки, 56</b></div>',
+      '<div class="map__text">We have the tastiest burgers!</div>',
+      '<div class="map__text">Visit us at: <b>Fontanka River Embankment, 56</b></div>',
       '</div>'
     ]
   }, {
     latitude: 59.93,
     longitude: 30.40,
-    hintContent: '<div class="map__item map__hint">Малоохтинский проспект, 61</div>',
+    hintContent: '<div class="map__item map__hint">61 Malookhtinsky Prospekt.</div>',
     balloonContent: [
       '<div class="map__item map__balloon">',
       '<img class="map__balloon"/>',
-      '<div class="map__text">Самые вкусные бургеры у нас!</div>',
-      '<div class="map__text">Заходите по адресу: <b>Малоохтинский проспект, 61</b></div>',
+      '<div class="map__text">We have the tastiest burgers!</div>',
+      '<div class="map__text">Visit us at: <b>61 Malookhtinsky Prospekt.</b></div>',
       '</div>'
     ]
   }
@@ -433,8 +433,6 @@ function init() {
   let map = new ymaps.Map('map', {
     center: [59.94, 30.32],
     zoom: 12,
-    // behaviors: [],
-    // controls: ['zoomControl'],
   });
 
   placemarks.forEach(function (obj) {

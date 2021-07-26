@@ -1524,7 +1524,7 @@ svg {
   top: 49.2%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: url("../../img/reviews/1.jpg") center center/cover no-repeat;
+  background: url("../../img/video/Play.jpg") center center/cover no-repeat;
 }
 @media (max-width: 768px) {
   .player__splash {
