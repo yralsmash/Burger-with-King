@@ -51,12 +51,12 @@ $(Slider).on('click', function(e){
   activeItem = items.filter('.active'),
   existedItem, edgeItem, reqItem;
 
-  if ($this.hasClass('products__slider-arrow--direction--next')) { // вперёд
+  if ($this.hasClass('products__slider-arrow--direction--next')) { // next
     existedItem = activeItem.next();
     edgeItem = items.first();
   };
 
-  if ($this.hasClass('products__slider-arrow--direction--prev')) { // назад
+  if ($this.hasClass('products__slider-arrow--direction--prev')) { // back
     existedItem = activeItem.prev();
     edgeItem = items.last();
   };
@@ -287,7 +287,7 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('yt-player', {
     height: '405',
     width: '660',
-    videoId: 'DEG2Lg-eAO0',
+    videoId: 'L6yX6Oxy_J8',
     playerVars: {
       controls: 0,
       disablekb: 0,
@@ -433,6 +433,8 @@ function init() {
   let map = new ymaps.Map('map', {
     center: [59.94, 30.32],
     zoom: 12,
+    controls: ['zoomControl'],
+    behaviors: [],
   });
 
   placemarks.forEach(function (obj) {
